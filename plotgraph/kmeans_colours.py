@@ -77,20 +77,20 @@ def plot_results(cluster, img, save_file):
     plt.show()
     return colour_labels
 
-def colormap(cluster,img):
+def colormap(cluster, img):
     colours = np.int_(cluster.cluster_centers_.round())
     cmap = colours[cluster.labels_]
-    cmap = cmap.reshape((img.shape[0],img.shape[1],3))
-    fig = plt.figure(figsize=(10,10))
+    cmap = cmap.reshape((img.shape[0], img.shape[1],3))
+    fig = plt.figure(figsize=(10, 10))
     plt.imshow(cmap)
     plt.xticks([])
     plt.yticks([])
     plt.grid(False)
     
 
-cluster,img = KMeansModel("./1.jpg",n_clusters=5)
+cluster, img = KMeansModel("./2.jpg", n_clusters=5)
 
 
-plot_results(cluster, img,save_file="")
+plot_results(cluster, img, save_file="")
 
 colormap(cluster,img)

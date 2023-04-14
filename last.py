@@ -80,4 +80,4 @@ def kmeans_segment_and_display(image_path, K):
     # Afficher les images
     display_images(image, segmented_image, palette_bands)
 
-kmeans_segment_and_display("./3.jpg", 5)
+kmeans_segment_and_display("./1.jpg", 5)
